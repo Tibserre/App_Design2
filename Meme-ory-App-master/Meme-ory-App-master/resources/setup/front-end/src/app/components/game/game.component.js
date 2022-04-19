@@ -26,8 +26,8 @@
       init() {
         // fetch the cards configuration from the server
         this.fetchConfig(
-          function (config) {
-            // TODO Step 3.2: use arrow function
+          (config)=>{
+            
             this._config = config;
     
             // create a card out of the config
@@ -40,21 +40,21 @@
     
             for (var i in this._cards) {
               // TODO Step 3.3: use Array.forEach()
-              (function () {
+              (function (){
                 // TODO Step 3.2: use arrow function
                 var card = this._cards[i];
                 this._boardElement.appendChild(card.getElement());
                 card.getElement().addEventListener(
                   "click",
-                  function () {
+                  ()=>{
                     this._flipCard(card);
-                  }.bind(this)
+                  }
                 ); // TODO Step 3.2 use arrow function.
               }.bind(this)());
             }
     
             this.start();
-          }.bind(this)
+          }
         );
       };
 
