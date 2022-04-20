@@ -30,6 +30,7 @@ What is a devDependency exactly? What are the differences with a dependency?
 
 ### Question 7 
 Can you think of at least 2 things that are possible with Java classes, but cannot be done with ES6 classes?
+- A FAIRE
 
 ### Question 8
 What are the differences between `var` and `let`
@@ -40,10 +41,12 @@ What is the .bind(this) stuff? What does happen if you delete it? Is it needed w
 - la methode `.bind(this)` permet de creer une nouvelle fonction avec le this en paramètre lorqu'elle est appelée, la nouvelle fonction crée est une copie de la fonction qui précède le `bind(this)`
 
 ### Question 10
-- What are the advantages of Promises?
-Les promesses permettent définir à l’avance quoi faire lorsqu’une opération asynchrone est terminée, quelque que soit le résultat, reussi ou pas.
+What are the advantages of Promises?
+- Les promesses permettent définir à l’avance quoi faire lorsqu’une opération asynchrone est terminée, quelque que soit le résultat, reussi ou pas.
 
 ### Question 11 à faire
+What version of ECMAScript async / await was released in?
+- Dans la version ECMA-262, 8th edition, Juin 2017
 
 ### Question 12
 What does the @ symbol mean in @babel/***?
@@ -56,3 +59,30 @@ Look at the files produced within dist/ folder. How babel transpile your class W
 ### Question 14 
 What is the weight of the transpiled sources compared to your original sources?
 - 16ko pour les files transpilés, 1.80Mo pour les originaux 
+
+### Question 15
+What is the difference between import * from './utils' and import { parseUrl } from './utils'?
+- `import *` permet de import all alors que import {Function} n'importe qu'une fonction 
+
+### Question 16
+Why the utils.js will also be transpiled?
+- Parce que c'est un fichier .js dans le dossier /app et tous les .js dans /app ont été transpilés avant que util.js soit ajouté
+
+### Question 17
+What does the webpack --config webpack.config.js do ?
+-  Un webpack permet, en reprenant tout le code de l'app, de pouvoir la lire dans tous les navigateurs web, c'est à la fois un serveur et un compilateur 
+
+### Question 18
+Play the whole game with size=2. By browsing the 3 views of the application, how many files did your browser download in total? How many time did it took to load them all?
+- 15 fichiers ont été chargés, ces derniers ont été chargés en 445ms
+
+### Question 19
+Can you guess how exactly style-loader works exactly?
+- style loader recupère tous les styles ecrits dans le css (en scss par ex) et insère le style (en css du coup) dans des balises styles aux bons endroits dans le head du html
+
+### Question 20
+What does the _ prefix means on a sass file?
+- le préfix _ est une convention pour dire que le fichier `_nomfichier` correspond à une partie du css complet, et que fe fichier sera importé (@import) dans une stylsheet principale 
+cette méthode aide a organiser son arboresence, mais tout sera compilé dans un seul fichier.
+
+
