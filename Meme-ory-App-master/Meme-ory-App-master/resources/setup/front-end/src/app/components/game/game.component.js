@@ -23,11 +23,11 @@
       this._matchedPairs = 0;
       }
 
-      init() {
+      async init() {
         // fetch the cards configuration from the server
         this.fetchConfig()
-          .then((config)=>{
-            
+          
+        const config = await this.fetchConfig();
             this._config = config;
     
             // create a card out of the config
@@ -47,8 +47,7 @@
             });
       
             this.start();
-          }
-        );
+          
       };
 
       start() {
@@ -64,7 +63,7 @@
         );
       };
 
-      fetchConfig() {
+      async fetchConfig() {
         return fetch(`${environment.api.host}/board?size=${this.  _size}`, {
           method: "GET",
         })
