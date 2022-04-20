@@ -47,4 +47,12 @@ Les promesses permettent définir à l’avance quoi faire lorsqu’une opérati
 
 ### Question 12
 What does the @ symbol mean in @babel/***?
-- le symbole @ designe le nom de l'auteur (michel, stephane, francis, ou babel par exemple, gaston est une autre possibilité d'ailleurs) 
+- le symbole @ designe le nom de l'auteur (michel, stephane, francis, ou babel par exemple, gaston est une autre possibilité d'ailleurs) cela permet d'avoir plusieurs bibliothèques qui ont le meme nom, mais un auteur différent (ex: @babel/PommeGenerator, et @Michel/PommeGenerator, ces deux bibli ont le meme nom mais peuvent cohabiter) 
+
+### Question 13 
+Look at the files produced within dist/ folder. How babel transpile your class WelcomeComponent?
+- Dans dist/ on se retrouve avec la meme arboresence que dans src, mais sans le css et l'html, uniquement les JS
+
+### Question 14 
+What is the weight of the transpiled sources compared to your original sources?
+- 16ko pour les files transpilés, 1.80Mo pour les originaux 
