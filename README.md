@@ -34,3 +34,25 @@ Can you think of at least 2 things that are possible with Java classes, but cann
 ### Question 8
 What are the differences between `var` and `let`
 - la différence principale est que `var` est une fonction, on peut redéclarer `var a=5` plusieurs fois alors que `let` est un bloc, on ne peut le déclarer qu'une seule fois
+
+### Question 9 
+What is the .bind(this) stuff? What does happen if you delete it? Is it needed when using an arrow function ?
+- la methode `.bind(this)` permet de creer une nouvelle fonction avec le this en paramètre lorqu'elle est appelée, la nouvelle fonction crée est une copie de la fonction qui précède le `bind(this)`
+
+### Question 10
+- What are the advantages of Promises?
+Les promesses permettent définir à l’avance quoi faire lorsqu’une opération asynchrone est terminée, quelque que soit le résultat, reussi ou pas.
+
+### Question 11 à faire
+
+### Question 12
+What does the @ symbol mean in @babel/***?
+- le symbole @ designe le nom de l'auteur (michel, stephane, francis, ou babel par exemple, gaston est une autre possibilité d'ailleurs) cela permet d'avoir plusieurs bibliothèques qui ont le meme nom, mais un auteur différent (ex: @babel/PommeGenerator, et @Michel/PommeGenerator, ces deux bibli ont le meme nom mais peuvent cohabiter) 
+
+### Question 13 
+Look at the files produced within dist/ folder. How babel transpile your class WelcomeComponent?
+- Dans dist/ on se retrouve avec la meme arboresence que dans src, mais sans le css et l'html, uniquement les JS
+
+### Question 14 
+What is the weight of the transpiled sources compared to your original sources?
+- 16ko pour les files transpilés, 1.80Mo pour les originaux 
