@@ -16,12 +16,9 @@
     this._id = id;
 
     this._imageElt = this.getElement().querySelector(".card-wrapper");
-    // TODO Step 3.2: use template literals (backquotes)
     // TODO Step 7: Update the path for images with 'src/app/components/game/card/assets/card***'
-    this._imageElt.querySelector("img.front-face").src =
-      "../game/card/assets/card-" + this._id + ".png";
-    this._imageElt.querySelector("img.back-face").src =
-      "../game/card/assets/back.png";
+    this._imageElt.querySelector("img.front-face").src = `../game/card/assets/card-${this._id}.png`;
+    this._imageElt.querySelector("img.back-face").src = `../game/card/assets/back.png`;
     }
 
     getElement() {
@@ -59,7 +56,7 @@
   window.CardComponent = CardComponent;
 })();
 
-var environment = {
+let environment = {
   api: {
     host: "See that ? Without closures, I can override variables from other files that belongs to the global scope.",
   },
